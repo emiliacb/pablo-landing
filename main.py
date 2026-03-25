@@ -83,5 +83,5 @@ def parse_content(filepath: Path) -> dict:
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
-    content = parse_content(BASE_DIR / "content.md")
+    content = parse_content(BASE_DIR / "content" / "content.md")
     return templates.TemplateResponse(request, "index.html", content)

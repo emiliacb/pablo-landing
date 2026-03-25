@@ -7,13 +7,13 @@ uvicorn main:app --reload --port 8000
 ```
 
 ## Architecture
-- **main.py** - FastAPI app. Reads `content.md`, parses it into sections, renders `templates/index.html` via Jinja2.
-- **content.md** - All portfolio content in structured markdown. Edit this to update text, add projects, or change skills.
+- **main.py** - FastAPI app. Reads `content/content.md`, parses it into sections, renders `templates/index.html` via Jinja2.
+- **content/content.md** - All portfolio content in structured markdown. Edit this to update text, add projects, or change skills.
 - **templates/index.html** - HTML template with Jinja2 placeholders. Edit to change page structure.
 - **static/style.css** - All styling. Dark theme with indigo accent. Pure CSS, no frameworks.
 
 ## How to Update Content
-Edit `content.md`. The markdown structure is:
+Edit `content/content.md`. The markdown structure is:
 - `# Name` - H1 for the portfolio owner name
 - `## hero` - First line is title, third line is tagline
 - `## about` - Paragraphs separated by blank lines
