@@ -56,13 +56,23 @@ def parse_content(filepath: Path) -> dict:
     for i in range(1, len(proj_parts) - 1, 2):
         title = proj_parts[i].strip()
         body = proj_parts[i + 1].strip()
+        # Extract links
+        links = []
+        links_match = re.search(r"\*\*Links\*\*:\s*(.+)$", body, re.MULTILINE)
+        if links_match:
+            for item in links_match.group(1).split(","):
+                item = item.strip()
+                if "|" in item:
+                    label, url = item.split("|", 1)
+                    links.append({"label": label.strip(), "url": url.strip()})
+            body = body[: links_match.start()].strip()
         # Extract tags
         tags = []
         tags_match = re.search(r"\*\*Tags\*\*:\s*(.+)$", body, re.MULTILINE)
         if tags_match:
             tags = [t.strip() for t in tags_match.group(1).split(",")]
             body = body[: tags_match.start()].strip()
-        projects.append({"title": title, "description": body, "tags": tags})
+        projects.append({"title": title, "description": body, "tags": tags, "links": links})
 
     # Parse contact
     contact = {}
