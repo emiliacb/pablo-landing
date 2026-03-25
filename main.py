@@ -4,6 +4,7 @@ from pathlib import Path
 
 mimetypes.add_type("text/css", ".css")
 mimetypes.add_type("application/javascript", ".js")
+mimetypes.add_type("image/svg+xml", ".svg")
 
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
@@ -98,4 +99,6 @@ def parse_content(filepath: Path) -> dict:
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
     content = parse_content(BASE_DIR / "content" / "content.md")
+    og_image_url = str(request.url_for("static", path="og-image.svg"))
+    content["og_image_url"] = og_image_url
     return templates.TemplateResponse(request, "index.html", content)

@@ -1,0 +1,19 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="1000" cy="150" r="200" fill="url(#accent)" />
+  <circle cx="200" cy="500" r="150" fill="url(#accent)" />
+  <text x="80" y="260" font-family="Inter, -apple-system, sans-serif" font-size="72" font-weight="600" fill="#e5e5e5">Pablo Lerner</text>
+  <text x="80" y="330" font-family="Inter, -apple-system, sans-serif" font-size="32" fill="#737373">Data Analyst &amp; AI Engineer</text>
+  <text x="80" y="400" font-family="Inter, -apple-system, sans-serif" font-size="24" fill="#525252">Turning data into decisions.</text>
+  <text x="80" y="440" font-family="Inter, -apple-system, sans-serif" font-size="24" fill="#525252">Building solutions with artificial intelligence.</text>
+</svg>
