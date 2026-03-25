@@ -1,5 +1,9 @@
+import mimetypes
 import re
 from pathlib import Path
+
+mimetypes.add_type("text/css", ".css")
+mimetypes.add_type("application/javascript", ".js")
 
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
