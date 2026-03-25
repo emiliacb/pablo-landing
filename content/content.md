@@ -8,7 +8,7 @@ Turning data into decisions. Building solutions with artificial intelligence.
 
 ## about
 
-Data Analyst with experience in exploratory analysis, visualization, and machine learning models. I specialize in financial data analysis, focusing on fraud detection, credit scoring, and risk assessment to support decision-making in fintech.
+Data Analyst with experience in exploratory analysis, visualization, and machine learning models. With hands-on experience in financial data analysis, including fraud detection, credit scoring, and risk assessment to support decision-making in fintech.
 
 Currently expanding into AI Engineering, building intelligent applications with LLMs, LangChain, and conversational agents.
 
