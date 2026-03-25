@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ name }} | {{ hero_title }}</title>
+  <meta name="description" content="{{ name }} - {{ hero_title }}. {{ hero_tagline }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <main>
+
+    <!-- Header -->
+    <header>
+      <h1>{{ name }}</h1>
+      <p class="subtitle">{{ hero_title }}</p>
+    </header>
+
+    <!-- About -->
+    <section class="about">
+      {% for paragraph in about %}
+      <p>{{ paragraph }}</p>
+      {% endfor %}
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2>Selected Projects</h2>
+      <div class="projects-grid">
+        {% for project in projects %}
+        <div class="project-card">
+          <div class="project-preview"></div>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+          <div class="project-tags">
+            {% for tag in project.tags %}
+            <span>{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- Connect -->
+    <section>
+      <h2>Connect</h2>
+      {% if contact.email %}
+      <p class="connect-text">Feel free to contact me at <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
+      {% endif %}
+      <div class="connect-links">
+        {% if contact.github %}
+        <a href="{{ contact.github }}" target="_blank" rel="noopener">Github &#8599;</a>
+        {% endif %}
+        {% if contact.linkedin %}
+        <a href="{{ contact.linkedin }}" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+        {% endif %}
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
