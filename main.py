@@ -99,6 +99,6 @@ def parse_content(filepath: Path) -> dict:
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
     content = parse_content(BASE_DIR / "content" / "content.md")
-    og_image_url = str(request.url_for("static", path="og-image.svg"))
+    og_image_url = str(request.url_for("static", path="og-image.png"))
     content["og_image_url"] = og_image_url
     return templates.TemplateResponse(request, "index.html", content)
