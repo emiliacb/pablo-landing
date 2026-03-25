@@ -1,0 +1,178 @@
+/* Pablo Lerner Portfolio - Ultra Minimal Dark */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: #0a0a0a;
+  color: #e5e5e5;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #e5e5e5;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+main {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 80px 24px 64px;
+}
+
+/* Header */
+header {
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.subtitle {
+  color: #737373;
+  font-size: 0.9rem;
+}
+
+/* About */
+.about {
+  margin-bottom: 80px;
+}
+
+.about p {
+  color: #a3a3a3;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.about p:last-child {
+  margin-bottom: 0;
+}
+
+/* Sections */
+section {
+  margin-bottom: 80px;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-preview {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #141414;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.project-card h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.project-card p {
+  color: #737373;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-tags span {
+  color: #525252;
+  font-size: 0.75rem;
+}
+
+.project-tags span:not(:last-child)::after {
+  content: " \00b7";
+  margin-left: 6px;
+}
+
+/* Connect */
+.connect-text {
+  color: #a3a3a3;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.connect-text a {
+  text-decoration: underline;
+}
+
+.connect-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.connect-links a {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #1a1a1a;
+  border: 1px solid #262626;
+  border-radius: 6px;
+  color: #a3a3a3;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.connect-links a:hover {
+  background: #262626;
+  color: #e5e5e5;
+  opacity: 1;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  main {
+    padding: 48px 20px 48px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    margin-bottom: 56px;
+  }
+}
