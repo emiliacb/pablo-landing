@@ -33,6 +33,14 @@ Graduate of Soy Henry's Data Analytics program.
 
 ## projects
 
+### CV Evaluator - ATS Resume Analyzer
+
+Web app that analyzes resumes for ATS compatibility using Claude AI (Anthropic). Accepts PDF, DOCX, and image files, extracts text with LiteParse, and returns a structured score with detected keywords, formatting issues, and actionable recommendations. Demonstrates AI engineering skills including prompt design, structured output with LangChain and Pydantic, clean backend architecture, and production deployment.
+
+**Links**: Live Demo|(https://bot-curriculum-1.onrender.com/) | GitHub|(https://github.com/pabloler21/bot_curriculum)
+
+**Tags**: Python, FastAPI, LangChain, Claude AI, Pydantic, LiteParse, SlowAPI, AI Engineering
+
 ### TutorBot - Python AI Tutor
 
 Interactive Python tutor chatbot built with LangChain and OpenRouter. Features tool-calling capabilities to search Stack Overflow for real-world examples, session management, and a Gradio UI. Demonstrates AI engineering skills including prompt design, tool integration, and conversational agent architecture.
