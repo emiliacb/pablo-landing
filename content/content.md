@@ -75,6 +75,6 @@ SQL-based data analysis project centered on designing a relational database and 
 
 ## contact
 
-- email: pabloo.ale1111@gmail.com
+- email: lerner.pb@gmail.com
 - linkedin: https://www.linkedin.com/in/pablo-lerner-591180336/
 - github: https://github.com/pabloler21
